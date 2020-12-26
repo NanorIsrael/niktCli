@@ -13,8 +13,8 @@ const RenderProducts = ({ item, auth, deleteItem }) => {
         item.map((item) => {
 
             return (
-                <div key={item._id} className='col-12 col-md-5'>
-                    <div className="mt-5">
+                <div key={item._id} className='col-md-4 col-sm-12 '>
+                    <div id='product-photo'>
                         <Card>
                             <CardImg width='100%' src={baseUrl + item.image} alt={item.label} />
                             {auth.isAuthenticated ?
@@ -30,7 +30,7 @@ const RenderProducts = ({ item, auth, deleteItem }) => {
                                 </CardImgOverlay>
                                 : null
                             }
-                            <CardBody>
+                            <CardBody className='cardbody'>
                                 <CardTitle><strong>Label:</strong> {item.label}</CardTitle>
                                 <CardText><strong>Price:</strong> {item.price} <i>cedis</i></CardText>
                                 <CardText><strong>Contact:</strong> {item.contact}</CardText>
@@ -152,7 +152,7 @@ class Products extends Component {
 
                     <div className='container'>
 
-                        <div className='row row-content'>
+                        <div className='row'>
                             <RenderProducts item={this.props.products} auth={this.props.auth}
                                 deleteItem={this.props.deleteItem}
                             />

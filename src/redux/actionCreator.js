@@ -27,7 +27,7 @@ export const loginUser=(Creds) => (dispatch) => {
   .then((response)=> {
     if(response.success){
       // console.log("token recieved",response.user.token)
-
+      console.log("loginUsefr",Creds)
     localStorage.setItem('token',response.user.token);
     localStorage.setItem('creds',JSON.stringify(Creds))
     localStorage.setItem('user',response.user._id)
@@ -99,7 +99,6 @@ export const signupFailure=(errmess)=>{
   }
 }
 export const signupNewUser = (info) => (dispatch) => {
-  console.log(info)
   dispatch(requestSignupDetails(info))
 
   return fetch(baseUrl + 'users/signup',{
@@ -111,7 +110,10 @@ export const signupNewUser = (info) => (dispatch) => {
   })
   .then((response)=>{
     if(response.ok)
+   { 
+     console.log(response)
     return response
+  }
     else{
       var error = new Error('Error '+ response.status +' :'+ response.statusText)
       error.response = response;

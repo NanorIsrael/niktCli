@@ -3,7 +3,7 @@ import './App.css';
 
 import Main from './components/Main';
 import {configStore} from './redux/createStore';
-import {HashRouter} from 'react-router-dom'
+import {HashRouter,BrowserRouter} from 'react-router-dom'
 import { Provider } from 'react-redux';
 
 class App extends Component {
@@ -11,11 +11,11 @@ class App extends Component {
     const store= configStore();
     return (
       <Provider store={store}>
-      <HashRouter>
+      <BrowserRouter>
             <div >
               <Main/>
               </div>
-            </HashRouter>
+            </BrowserRouter>
 
       </Provider>
       
