@@ -1,0 +1,11 @@
+[build]
+  command = "CI=false && yarn build"
+  publish = "build"
+
+[context.production]
+  environment = {NODE_VERSION = "14.16.1"}
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200 
