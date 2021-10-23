@@ -119,6 +119,7 @@ text-Align:left;
     right:0;
 
 }
+.login-btn
 #product-photo{
   border:2px solid #D1C4E9;
   margin:20px auto 20px auto
@@ -248,4 +249,8 @@ text-Align:left;
  border: 2px solid #fff;
  margin-bottom: 10px;
 }
+}
+
+.navbar-button:hover{
+  cursor: pointer;
 }

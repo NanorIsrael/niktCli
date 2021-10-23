@@ -226,16 +226,7 @@ class Header extends Component {
                             <ModalHeader toggle={this.signUp}>Register Here</ModalHeader>
                             <ModalBody className="ModalBody">
                                 <Form onSubmit={this.handleSignUp}>
-                                    <FormGroup>
-                                        <Label htmlFor="username"> Username</Label>
-                                        <Input type="text" id="username" name="username"
-                                            placeholder="username" innerRef={(input) => this.username = input} />
-                                    </FormGroup>
-                                    <FormGroup>
-                                        <Label htmlFor="password"> Password</Label>
-                                        <Input type="password" id="password" name="password" placeholder='password'
-                                            innerRef={(ps) => this.password = ps} />
-                                    </FormGroup>
+                                    
                                     <FormGroup>
                                         <Label htmlFor="Firstname"> First Name</Label>
                                         <Input type="text" id="firstname" name="firstname" placeholder='First name'
@@ -247,7 +238,16 @@ class Header extends Component {
                                             innerRef={(Lastname) => this.lastname = Lastname} />
                                     </FormGroup>
 
-
+                                    <FormGroup>
+                                        <Label htmlFor="username"> Username</Label>
+                                        <Input type="text" id="username" name="username"
+                                            placeholder="username" innerRef={(input) => this.username = input} />
+                                    </FormGroup>
+                                    <FormGroup>
+                                        <Label htmlFor="password"> Password</Label>
+                                        <Input type="password" id="password" name="password" placeholder='password'
+                                            innerRef={(ps) => this.password = ps} />
+                                    </FormGroup>
                                     <FormGroup>
                                         <Button className="bg-primary" type="submit" value="submit">Sign up</Button>
                                     </FormGroup>
