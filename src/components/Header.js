@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Collapse, NavbarToggler, ModalBody, Button, FormGroup, Label, Input, Form } from 'reactstrap';
-import { Jumbotron, Navbar, NavbarBrand, NavItem, Nav, Modal, ModalHeader } from 'reactstrap'
+import { Navbar, NavbarBrand, NavItem, Nav, Modal, ModalHeader } from 'reactstrap'
 import { NavLink } from 'react-router-dom';
 
 class Header extends Component {
@@ -50,9 +50,9 @@ class Header extends Component {
 
                         <div className="navbar-header" >
                              <NavLink className="pull-left d-none d-sm-block " to="/home" >
-                                <div id="logo-img" >
-                                    <img src="/logo.jpeg" width='100' height="80" alt="logo" />
-                                </div>
+                              
+                                    <img src="/logo.jpeg"  alt="logo" className="logo-img"/>
+                                
                             </NavLink> 
                             <NavbarBrand className="brand-title " to="/home"  >
                                 <h1 id="">CEDI-MART</h1>
