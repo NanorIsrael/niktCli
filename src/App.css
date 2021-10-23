@@ -8,9 +8,10 @@ body{
   /* position: relative; */
 }
 #logo-img{
-  width: 100px;
+  width: 80px;
   height: 80px;
   margin: 10px 15px 10px 0px;
+  border-radius: 50%;
 }
  
 .brand-title h1{ 
