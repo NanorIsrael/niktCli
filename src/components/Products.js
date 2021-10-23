@@ -13,7 +13,7 @@ const RenderProducts = ({ item, auth, deleteItem }) => {
         item.map((item) => {
 
             return (
-                <div key={item._id} className='col-md-4 col-sm-12 mt-15 mb-10'>
+                <div key={item._id} className='col-md-4 col-sm-12 my-15'>
                     <div id='product-photo'>
                         <Card>
                             <CardImg width='100%' src={baseUrl + item.image} alt={item.label} />
